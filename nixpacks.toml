@@ -1,8 +1,6 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mysqli", "php82Extensions.mbstring", "php82Extensions.json", "php82Extensions.session", "apache"]
-
-[phases.build]
-cmds = []
-
+nixPkgs = ["php82", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mysqli", "php82Extensions.mbstring", "php82Extensions.session"]
+ 
 [start]
-cmd = "apache2-foreground"
+cmd = "php -S 0.0.0.0:$PORT"
+ 
